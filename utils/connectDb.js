@@ -11,6 +11,7 @@ async function connectDb() {
   const db = await mongoose.connect(process.env.MONGO_SRV, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    dbName: "mern",
   });
 
   console.log("DB Connected: ", db.connection.host);
